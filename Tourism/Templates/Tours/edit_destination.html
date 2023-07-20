@@ -1,0 +1,282 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- Google fonts -->
+		<!-- <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
+		<link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+		<!-- Stylesheets -->
+		<link rel="stylesheet" href="{% static 'css/vendors.css'%}">
+		<link rel="stylesheet" href="{% static 'css/main.css'%}">
+		<!-- Google fonts -->
+		<!-- <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
+		<link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+		<!-- Google icons -->
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+		<!-- Font awesome icons 6.2.1 -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<!-- <script src="{% static 'https://kit.fontawesome.com/91baba85fa.js" crossorigin="anonymous"></script> -->
+		<!-- Font awesome icons 4 -->
+		<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+		<title>Dashboard</title>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	</head>
+	<body>
+		<div class="preloader js-preloader">
+			<div class="preloader__wrap">
+				<div class="preloader__icon">
+					<svg width="38" height="37" viewBox="0 0 38 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<g clip-path="url(#clip0_1_41)">
+							<path d="M32.9675 13.9422C32.9675 6.25436 26.7129 0 19.0251 0C11.3372 0 5.08289 6.25436 5.08289 13.9422C5.08289 17.1322 7.32025 21.6568 11.7327 27.3906C13.0538 29.1071 14.3656 30.6662 15.4621 31.9166V35.8212C15.4621 36.4279 15.9539 36.92 16.561 36.92H21.4895C22.0965 36.92 22.5883 36.4279 22.5883 35.8212V31.9166C23.6849 30.6662 24.9966 29.1071 26.3177 27.3906C30.7302 21.6568 32.9675 17.1322 32.9675 13.9422V13.9422ZM30.7699 13.9422C30.7699 16.9956 27.9286 21.6204 24.8175 25.7245H23.4375C25.1039 20.7174 25.9484 16.7575 25.9484 13.9422C25.9484 10.3587 25.3079 6.97207 24.1445 4.40684C23.9229 3.91841 23.6857 3.46886 23.4347 3.05761C27.732 4.80457 30.7699 9.02494 30.7699 13.9422ZM20.3906 34.7224H17.6598V32.5991H20.3906V34.7224ZM21.0007 30.4014H17.0587C16.4167 29.6679 15.7024 28.8305 14.9602 27.9224H16.1398C16.1429 27.9224 16.146 27.9227 16.1489 27.9227C16.152 27.9227 23.0902 27.9224 23.0902 27.9224C22.3725 28.8049 21.6658 29.6398 21.0007 30.4014ZM19.0251 2.19765C20.1084 2.19765 21.2447 3.33365 22.1429 5.3144C23.1798 7.60078 23.7508 10.6649 23.7508 13.9422C23.7508 16.6099 22.8415 20.6748 21.1185 25.7245H16.9322C15.2086 20.6743 14.2994 16.6108 14.2994 13.9422C14.2994 10.6649 14.8706 7.60078 15.9075 5.3144C16.8057 3.33365 17.942 2.19765 19.0251 2.19765V2.19765ZM7.28053 13.9422C7.28053 9.02494 10.3184 4.80457 14.6157 3.05761C14.3647 3.46886 14.1273 3.91841 13.9059 4.40684C12.7425 6.97207 12.102 10.3587 12.102 13.9422C12.102 16.7584 12.9462 20.7176 14.6126 25.7245H13.2259C9.33565 20.6126 7.28053 16.5429 7.28053 13.9422Z" fill="#3554D1" />
+						</g>
+						<defs>
+							<clipPath id="clip0_1_41">
+								<rect width="36.92" height="36.92" fill="white" transform="translate(0.540039)" />
+							</clipPath>
+						</defs>
+					</svg>
+				</div>
+			</div>
+			<div class="preloader__title">RoyalTour</div>
+		</div>
+		<div class="header-margin"></div>
+		<header data-add-bg="" class="header -dashboard bg-white js-header" data-x="header" data-x-toggle="is-menu-opened">
+			<div data-anim="fade" class="header__container px-30 sm:px-20">
+				<div class="-left-side">
+					<a href="#" class="header-logo" data-x="header-logo" data-x-toggle="is-logo-dark">
+						<img src="{% static 'img/general/Untitled (2).svg' %}" alt="logo icon">
+						<img src="{% static 'img/general/Untitled (2).svg' %}" alt="logo icon">
+					</a>
+				</div>
+				<div class="row justify-between items-center pl-60 lg:pl-20">
+					<div class="col-auto">
+						<div class="d-flex items-center">
+							<button data-x-click="dashboard">
+								<i class="fa-solid fa-bars text-20"></i>
+							</button>
+							<div class="single-field relative d-flex items-center md:d-none ml-30">
+								<input class="pl-50 border-light text-dark-1 h-50 rounded-8" type="email" placeholder="Search">
+								<button class="absolute d-flex items-center h-full">
+									<i class="fa-solid fa-magnifying-glass text-20 px-15 text-dark-1"></i>
+								</button>
+							</div>
+						</div>
+					</div>
+					<div class="col-auto">
+						<div class="d-flex items-center">
+							{% if not img%}
+							<div class="pl-15">
+								<img src="{% static 'img/avatars/3.png' %}" alt="image" class="size-50 rounded-22 object-cover">
+							</div>
+							{% else %}
+							<div class="pl-15">
+								<img src={{img}} alt="image" class="size-50 rounded-22 object-cover">
+							</div>
+							{% endif %}
+							<div class="d-none xl:d-flex x-gap-20 items-center pl-20" data-x="header-mobile-icons" data-x-toggle="text-white">
+								<div>
+									<button class="d-flex items-center fa-solid fa-ellipsis-vertical text-20" data-x-click="html, header, header-logo, header-mobile-icons, mobile-menu"></button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<form method="POST" enctype="multipart/form-data" novalidate> {% csrf_token %} {{ form.non_field_errors }}
+			<div class="dashboard" data-x="dashboard" data-x-toggle="-is-sidebar-open">
+				<div class="dashboard__sidebar bg-white scroll-bar-1">
+					<div class="sidebar -dashboard">
+						<div id="leftcol_item">
+							<div class="user_dashboard_pic"> {% if not img %} <img alt="user photo" src="{% static '\img\gallery\1\4.png'%}" style="width: 230px; height: 230px; object-fit: cover; border-radius: 15px;"> {% else %} <img alt="user photo" src="{{img}}" style="width: 230px; height: 230px; object-fit: cover; border-radius: 15px;"> {% endif %} </div>
+						</div>
+						<br>
+						<a href="{% url 'Provider:provider_profile' %}" class="items-center text-15 lh-2 fw-1000">
+							<div class="sidebar__button">
+								<div class="sidebar__item">
+									<i class="fa-sharp fa-solid fa-user text-20 px-15 text-dark-1 mr-15"></i>
+									<b>User Profile</b>
+								</div>
+							</div>
+						</a>
+						<a href="{% url 'Tour:add_destination' %}" class="items-center text-15 lh-2 fw-500" style="margin-top: 20px;">
+							<div class="sidebar__button ">
+								<div class="sidebar__item">
+									<i class="fa-sharp fa-solid fa-map-pin text-20 px-15 text-dark-1 mr-15"></i>
+									<b>Add Destination</b>
+								</div>
+							</div>
+						</a>
+						<a href="{% url 'Tour:manage_destinations' %}" class="items-center text-15 lh-2 fw-1000">
+							<div class="sidebar__button -is-active">
+								<div class="sidebar__item">
+									<i class="fa-sharp fa-solid fa-list-check text-20 px-15 text-dark-1 mr-15"></i>
+									<b>Manage Desti</b>
+								</div>
+							</div>
+						</a>
+						<a href="{% url 'Provider:destination_quotes' %}" class="items-center text-15 lh-2 fw-1000">
+							<div class="sidebar__button">
+								<div class="sidebar__item">
+									<i class="fa-sharp fas fa-bullseye	text-20 px-15 text-dark-1 mr-15"></i>
+									<b>Requested Desti</b>
+								</div>
+							</div>
+						</a>
+						<a href="{% url 'Provider:provider_logout' %}" class="items-center text-15 lh-2 fw-1000">
+							<div class="sidebar__button">
+								<div class="sidebar__item">
+									<i class="fa-sharp fa-solid fa-right-from-bracket text-20 px-15 text-dark-1 mr-15"></i>
+									<b>Logout</b>
+								</div>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class="dashboard__main">
+					<div class="dashboard__content bg-light-2">
+						<div class="row justify-between items-end pb-60 lg:pb-40 md:pb-32">
+							<div style="text-align: center;">
+								<h1 class="text-30 lh-14 fw-200">Edit Destination</h1>
+							</div>
+						</div>
+						<div class="py-30 px-30 rounded-4 bg-white shadow-3">
+							<div class="row justify-between items-center">
+								<div class="col-lg-12 col-md-12">
+									<div class="row">
+										<div class="col-md-6">
+											<div class="form-group">
+												<label class="lh-1 text-16 text-light-1">{{form.name.label_tag}}</label>
+												<div style="border: 1px solid #ccc; padding: 5px; border-radius: 10px;">{{form.name}}</div>
+												<span class="errorlist">{{form.username.name}}</span>
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="form-group">
+												<label class="lh-1 text-16 text-light-1">{{ form.language.label_tag }}</label>
+												<div style="border: 1px solid #ccc; padding: 5px; border-radius: 10px;">{{ form.language }}</div>
+												<span class="errorlist">{{ form.language.errors }}</span>
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-md-6">
+											<div class="form-group">
+												<label class="lh-1 text-16 text-light-1">{{ form.image.label_tag }}</label>
+												<div style="border: 1px solid #ccc; padding: 5px; border-radius: 10px;">{{ form.image }}</div>
+												<span class="errorlist">{{ form.image.errors }}</span>
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="form-group">
+												<label class="lh-1 text-16 text-light-1">{{ form.climate.label_tag }}</label>
+												<div style="border: 1px solid #ccc; padding: 5px; border-radius: 10px;">{{ form.climate }}</div>
+												<span class="errorlist">{{ form.climate.errors }}</span>
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-md-6">
+											<div class="form-group">
+												<label class="lh-1 text-16 text-light-1">{{ form.city.label_tag }}</label>
+												{{ form.city }}
+												<span class="errorlist">{{ form.city.errors }}</span>
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="form-group">
+												<label class="lh-1 text-16 text-light-1">State:</label>
+												{{ form.country }}
+												<span class="errorlist">{{ form.country.errors }}</span>
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-md-6">
+											<div class="form-group">
+												<label class="lh-1 text-16 text-light-1">{{ form.currency.label_tag }}</label>
+												<div style="border: 1px solid #ccc; padding: 5px; border-radius: 10px;">{{ form.currency }}</div>
+												<span class="errorlist">{{ form.currency.errors }}</span>
+											</div>
+										</div>
+                                        <div class="col-md-6">
+											<div class="form-check">
+												<label class="form-check-label">{{ form.timezone.label_tag }}</label>
+												<div style="border: 1px solid #ccc; padding: 5px; border-radius: 10px;">{{ form.timezone }}</div>
+												<span class="errorlist">{{ form.timezone.errors }}</span>
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-md-6">
+											<div class="form-group">
+												<label class="lh-1 text-16 text-light-1">{{ form.days.label_tag }}</label>
+												<div style="border: 1px solid #ccc; padding: 5px; border-radius: 10px;">{{ form.days }}</div>
+												<span class="errorlist">{{ form.days.errors }}</span>
+											</div>
+										</div>
+                                        <div class="col-md-6">
+											<div class="form-check">
+												<label class="form-check-label">{{ form.nights.label_tag }}</label>
+												<div style="border: 1px solid #ccc; padding: 5px; border-radius: 10px;">{{ form.nights }}</div>
+												<span class="errorlist">{{ form.nights.errors }}</span>
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-md-6">
+											<br>
+											<div class="form-group">
+												<label class="lh-1 text-16 text-light-1">{{ form.itinerary.label_tag }}</label>
+												{{ form.itinerary }}
+												<span class="errorlist">{{ form.itinerary.errors }}</span>
+											</div>
+										</div>
+										<div class="col-md-6">
+											<br>
+											<div class="form-check">
+												<label class="form-check-label">{{ form.is_popular.label_tag }}</label>
+												{{ form.is_popular }}
+												<span class="errorlist">{{ form.is_popular.errors }}</span>
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-md-12">
+											<div class="form-group">
+												<label class="lh-1 text-16 text-light-1">{{ form.description.label_tag }}</label>
+												{{ form.description }}
+												<span class="errorlist">{{ form.description.errors }}</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="form-group">
+									<button type="submit" class="btn btn-primary" style="width: 870px;">Edit Destination</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			</div>
+		</form>
+		<!-- JavaScript -->
+		<script src="{% static 'https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"
+        integrity="sha512-QSkVNOCYLtj73J4hbmVoOV6KVZuMluZlioC+trLpewV8qMjsWqlIQvkn1KGX2StWvPMdWGBqim1xlC8krl1EKQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+																<script src="{% static 'https://maps.googleapis.com/maps/api/js?key=AIzaSyAAz77U5XQuEME6TpftaMdX0bBelQxXRlM"></script>
+																<script src="{% static 'https://unpkg.com/@googlemaps/markerclusterer/dist/index.min.js"></script>
+																<!-- JavaScript link -->
+																<script src="{% static 'js/api.js' %}"></script>
+		<script src="{% static 'js/index.js' %}"></script>
+		<script src="{% static 'js/vendors.js' %}"></script>
+		<script src="{% static 'js/main.js' %}"></script>
+	</body>
+</html>
